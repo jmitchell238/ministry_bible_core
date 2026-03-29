@@ -1,0 +1,14 @@
+name: ministry_bible_core
+description: Shared Bible reading business logic for MinistryBase and bible-reading-tracker. Pure Dart — no Flutter, no Hive.
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  uuid: ^4.0.0
+  collection: ^1.18.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.25.6

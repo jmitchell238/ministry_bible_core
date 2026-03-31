@@ -161,5 +161,42 @@ void main() {
       );
       expect(entry.toString(), contains('John-3-16'));
     });
+
+    test('hashCode is consistent', () {
+      final e1 = ReadingProgressEntry(
+        verseId: 'Genesis-1-1',
+        readAt: DateTime(2026, 1, 1),
+      );
+      final e2 = ReadingProgressEntry(
+        verseId: 'Genesis-1-1',
+        readAt: DateTime(2026, 1, 1),
+      );
+      expect(e1.hashCode, equals(e2.hashCode));
+    });
+
+    test('copyWith with no args returns equal copy', () {
+      final entry = ReadingProgressEntry(
+        verseId: 'Genesis-1-1',
+        readAt: DateTime(2026, 1, 1),
+      );
+      final copy = entry.copyWith();
+      expect(copy.verseId, equals(entry.verseId));
+      expect(copy.readAt, equals(entry.readAt));
+    });
+  });
+
+  group('ReadingStreak toString', () {
+    test('toString contains streak info', () {
+      final s = ReadingStreak(
+        currentActionStreak: 5,
+        highestActionStreak: 10,
+        currentGoalStreak: 2,
+        highestGoalStreak: 4,
+        createdAt: DateTime(2026, 1, 1),
+        modifiedAt: DateTime(2026, 1, 1),
+      );
+      expect(s.toString(), contains('5/10'));
+      expect(s.toString(), contains('2/4'));
+    });
   });
 }

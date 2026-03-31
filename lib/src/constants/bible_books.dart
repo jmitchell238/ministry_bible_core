@@ -1,6 +1,5 @@
 /// All 66 books of the Bible in canonical order.
-class BibleBooks {
-  BibleBooks._();
+abstract final class BibleBooks {
 
   static const List<String> all = [
     // Old Testament - Pentateuch

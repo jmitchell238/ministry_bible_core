@@ -222,4 +222,32 @@ void main() {
       expect(book.toString(), contains('Genesis'));
     });
   });
+
+  group('copyWith defaults (all ?? this.x paths)', () {
+    test('BibleVerse.copyWith with no args returns equal copy', () {
+      final verse = makeVerse();
+      final copy = verse.copyWith();
+      expect(copy, equals(verse));
+      expect(copy.id, equals(verse.id));
+      expect(copy.text, equals(verse.text));
+      expect(copy.wordCount, equals(verse.wordCount));
+    });
+
+    test('BibleChapter.copyWith with no args returns equal copy', () {
+      final chapter = makeChapter();
+      final copy = chapter.copyWith();
+      expect(copy, equals(chapter));
+      expect(copy.number, equals(chapter.number));
+      expect(copy.verses, equals(chapter.verses));
+    });
+
+    test('BibleBook.copyWith with no args returns equal copy', () {
+      final book = makeBook();
+      final copy = book.copyWith();
+      expect(copy, equals(book));
+      expect(copy.id, equals(book.id));
+      expect(copy.name, equals(book.name));
+      expect(copy.testament, equals(book.testament));
+    });
+  });
 }

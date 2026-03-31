@@ -2,8 +2,7 @@
 ///
 /// The grace period allows readings between 12:00am–1:00am to count for
 /// the previous day, preventing streaks from breaking for late-night readers.
-class GracePeriodHelper {
-  GracePeriodHelper._();
+abstract final class GracePeriodHelper {
 
   /// Times from 12:00am (hour 0) up to (but not including) 1:00am count
   /// as the previous day.

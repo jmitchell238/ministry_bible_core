@@ -5,8 +5,7 @@ import 'grace_period_helper.dart';
 ///
 /// All methods are static and return new [ReadingStreak] instances —
 /// nothing is mutated and there are no async operations or storage concerns.
-class StreakCalculator {
-  StreakCalculator._();
+abstract final class StreakCalculator {
 
   /// Apply a reading event to the current streak state and return a new [ReadingStreak].
   ///

@@ -130,5 +130,51 @@ void main() {
       expect(result.toString(), contains('John-3-16'));
       expect(result.toString(), contains('matchPosition: 3'));
     });
+
+    test('fromJson full round-trip', () {
+      final original = SearchResult(
+        verse: verse,
+        highlightedText: 'For God so loved',
+        matchPosition: 4,
+      );
+      final json = original.toJson();
+      final restored = SearchResult.fromJson(
+        json,
+        bookId: 43,
+        bookName: 'John',
+        chapter: 3,
+      );
+      expect(restored.highlightedText, equals(original.highlightedText));
+      expect(restored.matchPosition, equals(original.matchPosition));
+      expect(restored.verse.id, equals(original.verse.id));
+    });
+
+    test('copyWith with no args returns equal copy', () {
+      final result = SearchResult(
+        verse: verse,
+        highlightedText: 'text',
+        matchPosition: 2,
+      );
+      final copy = result.copyWith();
+      expect(copy.verse.id, equals(result.verse.id));
+      expect(copy.highlightedText, equals(result.highlightedText));
+      expect(copy.matchPosition, equals(result.matchPosition));
+    });
+
+    test('hashCode is consistent', () {
+      final r1 = SearchResult(verse: verse, highlightedText: 'text', matchPosition: 1);
+      final r2 = SearchResult(verse: verse, highlightedText: 'text', matchPosition: 1);
+      expect(r1.hashCode, equals(r2.hashCode));
+    });
+  });
+
+  group('ScripturePassage copyWith defaults', () {
+    test('copyWith with no args returns equal copy', () {
+      final p = makePassage();
+      final copy = p.copyWith();
+      expect(copy, equals(p));
+      expect(copy.book, equals(p.book));
+      expect(copy.translationCode, equals(p.translationCode));
+    });
   });
 }

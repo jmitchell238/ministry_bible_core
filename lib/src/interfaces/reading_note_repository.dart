@@ -13,4 +13,7 @@ abstract class ReadingNoteRepository {
 
   Future<bool> hasVerseNote(String verseId);
   Future<bool> hasChapterNote(int bookId, int chapter);
+
+  /// Returns all notes that carry [tag] in their tags list.
+  Future<List<ReadingNote>> getForTag(String tag);
 }

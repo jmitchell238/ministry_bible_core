@@ -66,4 +66,19 @@ void main() {
       expect(GracePeriodHelper.gracePeriodHour, equals(1));
     });
   });
+
+  group('GracePeriodHelper live clock methods', () {
+    test('isInGracePeriod returns a bool', () {
+      final result = GracePeriodHelper.isInGracePeriod();
+      expect(result, isA<bool>());
+    });
+
+    test('getCurrentTrackingDay returns midnight-normalized DateTime', () {
+      final result = GracePeriodHelper.getCurrentTrackingDay();
+      expect(result, isA<DateTime>());
+      expect(result.hour, equals(0));
+      expect(result.minute, equals(0));
+      expect(result.second, equals(0));
+    });
+  });
 }

@@ -133,5 +133,10 @@ void main() {
       final day1 = planService.getTodaysAssignment(kPlanSequential, DateTime.now(), 1);
       expect(day1, isNotEmpty);
     });
+
+    test('chronological plan is non-empty', () {
+      final day1 = planService.getTodaysAssignment(kPlanChronological, DateTime.now(), 1);
+      expect(day1, isNotEmpty);
+    });
   });
 }

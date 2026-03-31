@@ -26,8 +26,7 @@ class DetectedScriptureRef {
 ///   "John 3:16"  "Gen 1:1-3"  "1 Cor 13:4"  "Ps 23:1"
 ///
 /// Numbered books may appear as "1 John", "1John", "1 Cor", "1Cor", etc.
-class ScriptureAutoDetector {
-  ScriptureAutoDetector._();
+abstract final class ScriptureAutoDetector {
 
   // ── Abbreviation → canonical book name ───────────────────────────────────
 

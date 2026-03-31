@@ -257,4 +257,29 @@ void main() {
       expect(result.highestGoalStreak, equals(2)); // d0+d1
     });
   });
+
+  group('StreakCalculator.recordActivity consecutive goal streak', () {
+    test('two consecutive days of goal achievement increments goal streak', () {
+      final streak0 = ReadingStreak.empty();
+
+      // Day 1: goal achieved → currentGoalStreak = 1
+      final streak1 = StreakCalculator.recordActivity(
+        streak0,
+        _d1,
+        hasAction: true,
+        goalAchieved: true,
+      );
+      expect(streak1.currentGoalStreak, equals(1));
+
+      // Day 2 (consecutive): goal achieved → currentGoalStreak++ = 2
+      final streak2 = StreakCalculator.recordActivity(
+        streak1,
+        _d2,
+        hasAction: true,
+        goalAchieved: true,
+      );
+      expect(streak2.currentGoalStreak, equals(2));
+      expect(streak2.highestGoalStreak, equals(2));
+    });
+  });
 }

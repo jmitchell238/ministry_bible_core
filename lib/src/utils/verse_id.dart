@@ -8,8 +8,7 @@ import '../constants/bible_books.dart';
 /// - Genesis 1:1    → `"Genesis-1-1"`
 /// - Song of Solomon 3:2 → `"SongofSolomon-3-2"`
 /// - 1 Corinthians 13:4 → `"1Corinthians-13-4"`
-class VerseId {
-  VerseId._();
+abstract final class VerseId {
 
   /// Encode a book name, chapter, and verse number into a verse ID string.
   static String encode(String bookName, int chapter, int verse) {

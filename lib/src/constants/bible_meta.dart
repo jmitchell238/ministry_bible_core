@@ -2,8 +2,7 @@
 ///
 /// Contains testament groupings and chapter counts per book.
 /// Does NOT contain verse text — load that via [BibleContentService].
-class BibleMeta {
-  BibleMeta._();
+abstract final class BibleMeta {
 
   // ── Testament groupings ─────────────────────────────────────────────────────
 

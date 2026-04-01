@@ -44,6 +44,24 @@ void main() {
       final dayNum = planService.getCurrentDayNumber(yesterday);
       expect(dayNum, equals(2));
     });
+
+    test('with paused state does not count paused days', () {
+      // Plan started 10 days ago, paused 5 days ago and never resumed
+      final tenDaysAgo = DateTime.now().subtract(const Duration(days: 10));
+      final fiveDaysAgo = DateTime.now().subtract(const Duration(days: 5));
+      final state = ReadingPlanState(
+        startDate: tenDaysAgo,
+        events: [
+          ReadingPlanEvent(
+            type: ReadingPlanEventType.paused,
+            date: fiveDaysAgo,
+          ),
+        ],
+      );
+      final dayNum = planService.getCurrentDayNumber(tenDaysAgo, state: state);
+      // 10 elapsed days − 5 paused = 5 active + 1 = day 6
+      expect(dayNum, equals(6));
+    });
   });
 
   group('ReadingPlanService.getPlanProgress', () {

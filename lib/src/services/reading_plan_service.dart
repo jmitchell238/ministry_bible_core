@@ -1,4 +1,5 @@
 import 'bible_content_service.dart';
+import '../models/reading_plan_state.dart';
 
 /// Plan type constants for [ReadingPlanService].
 const kPlanSequential = 'sequential';
@@ -37,7 +38,10 @@ class ReadingPlanService {
   }
 
   /// Current day number (1 = start date) based on [startDate].
-  int getCurrentDayNumber(DateTime startDate) {
+  ///
+  /// If [state] is provided, paused days are excluded from the count.
+  int getCurrentDayNumber(DateTime startDate, {ReadingPlanState? state}) {
+    if (state != null) return state.effectiveDayNumber(DateTime.now());
     final difference = DateTime.now().difference(startDate).inDays;
     return difference + 1;
   }

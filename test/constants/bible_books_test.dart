@@ -50,5 +50,46 @@ void main() {
       expect(BibleBooks.findBook('Hezekiah'), isNull);
       expect(BibleBooks.findBook('zzz'), isNull);
     });
+
+    group('findBook aliases', () {
+      test('Psalm → Psalms', () {
+        expect(BibleBooks.findBook('Psalm'), equals('Psalms'));
+      });
+
+      test('Revelations → Revelation', () {
+        expect(BibleBooks.findBook('Revelations'), equals('Revelation'));
+      });
+
+      test('Song of Songs → Song of Solomon', () {
+        expect(BibleBooks.findBook('Song of Songs'), equals('Song of Solomon'));
+      });
+
+      test('SoS → Song of Solomon', () {
+        expect(BibleBooks.findBook('SoS'), equals('Song of Solomon'));
+      });
+
+      test('1st John → 1 John', () {
+        expect(BibleBooks.findBook('1st John'), equals('1 John'));
+      });
+
+      test('2nd Kings → 2 Kings', () {
+        expect(BibleBooks.findBook('2nd Kings'), equals('2 Kings'));
+      });
+
+      test('3rd John → 3 John', () {
+        expect(BibleBooks.findBook('3rd John'), equals('3 John'));
+      });
+
+      test('alias lookup is case-insensitive', () {
+        expect(BibleBooks.findBook('psalm'), equals('Psalms'));
+        expect(BibleBooks.findBook('REVELATIONS'), equals('Revelation'));
+        expect(BibleBooks.findBook('song of songs'), equals('Song of Solomon'));
+      });
+
+      test('prefix matching still works after alias check', () {
+        expect(BibleBooks.findBook('Gen'), equals('Genesis'));
+        expect(BibleBooks.findBook('Rev'), equals('Revelation'));
+      });
+    });
   });
 }

@@ -1,0 +1,12 @@
+{
+    "name": "ministry_bible_core Demo",
+    "short_name": "MB Core Demo",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1a1a2e",
+    "theme_color": "#4a90d9",
+    "description": "Interactive demo of the ministry_bible_core Dart package.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": []
+}

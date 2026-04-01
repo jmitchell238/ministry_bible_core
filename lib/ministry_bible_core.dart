@@ -45,3 +45,5 @@ export 'src/interfaces/search_history_repository.dart';
 export 'src/interfaces/prayer_repository.dart';
 export 'src/interfaces/study_note_repository.dart';
 export 'src/services/verse_of_the_day_service.dart';
+export 'src/models/verse_card.dart';
+export 'src/services/verse_card_formatter.dart';

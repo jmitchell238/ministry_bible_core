@@ -1,5 +1,8 @@
 name: ministry_bible_core
-description: Shared Bible reading business logic for MinistryBase and bible-reading-tracker. Pure Dart — no Flutter, no Hive.
+description: >-
+  Shared Bible reading business logic for MinistryBase and bible-reading-tracker.
+  Pure Dart — no Flutter, no Hive.
+  Copyright (c) 2026 James Mitchell. All Rights Reserved. See LICENSE for terms.
 version: 0.1.0
 
 environment:

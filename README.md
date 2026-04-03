@@ -1,5 +1,8 @@
 # ministry_bible_core
 
+> **Copyright (c) 2026 James Mitchell. All Rights Reserved.**
+> This software is proprietary. No use, copying, modification, distribution, or forking is permitted without the explicit written permission of the author. See [LICENSE](LICENSE) for full terms.
+
 A pure Dart package containing all shared Bible reading business logic for MinistryBase and the bible-reading-tracker mobile app. No Flutter SDK dependency, no Hive — just plain Dart that runs anywhere.
 
 ```

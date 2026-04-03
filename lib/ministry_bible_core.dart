@@ -1,4 +1,4 @@
-// Copyright (c) 2026 James Mitchell. All Rights Reserved.
+// Copyright (c) 2026 James Mitchell / 238 Apps. All Rights Reserved.
 // Unauthorized use, copying, or distribution is strictly prohibited.
 // See LICENSE file for details.
 library ministry_bible_core;

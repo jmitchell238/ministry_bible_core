@@ -1,10 +1,10 @@
-Copyright (c) 2026 James Mitchell. All Rights Reserved.
+Copyright (c) 2026 James Mitchell / 238 Apps. All Rights Reserved.
 
 PROPRIETARY AND CONFIDENTIAL
 
 This software, "ministry_bible_core", and all associated source code,
 documentation, assets, and related materials (collectively, the "Software")
-are the exclusive intellectual property of James Mitchell.
+are the exclusive intellectual property of James Mitchell and 238 Apps.
 
 RESTRICTIONS
 
@@ -17,7 +17,7 @@ No part of this Software may be:
   - Incorporated into any other software, product, or project
   - Forked, cloned (beyond viewing on the hosting platform), or mirrored
 
-without the prior explicit written permission of James Mitchell.
+without the prior explicit written permission of James Mitchell / 238 Apps.
 
 The fact that this Software is publicly visible on a hosting platform (e.g.,
 GitHub) does NOT constitute a grant of any license, right, or permission to
@@ -25,19 +25,20 @@ use, copy, modify, distribute, or otherwise exploit the Software in any manner.
 
 ATTRIBUTION
 
-Any use of this Software authorized in writing by James Mitchell must include
-clear and prominent attribution to the original author:
+Any use of this Software authorized in writing by James Mitchell / 238 Apps
+must include clear and prominent attribution to the original author:
 
-  "ministry_bible_core by James Mitchell (https://github.com/jmitchell238)"
+  "ministry_bible_core by James Mitchell / 238 Apps (https://github.com/jmitchell238)"
 
 DISCLAIMER OF WARRANTIES
 
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
-JAMES MITCHELL BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+JAMES MITCHELL OR 238 APPS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 ENFORCEMENT
 

@@ -1,6 +1,6 @@
 # ministry_bible_core
 
-A pure Dart package with the Bible reading logic meant to be shared between MinistryBase and Bible Reading Tracker: Bible text and search, reading plans, streaks, notes, bookmarks, scripture detection and more. It has no Flutter or Hive dependency, so it runs anywhere Dart does. Each app supplies its own storage by implementing the package's repository interfaces.
+A pure Dart package with the Bible reading logic meant to be shared between Ministrative and Bible Reading Tracker: Bible text and search, reading plans, streaks, notes, bookmarks, scripture detection and more. It has no Flutter or Hive dependency, so it runs anywhere Dart does. Each app supplies its own storage by implementing the package's repository interfaces.
 
 Neither app depends on it yet.
 
